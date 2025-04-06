@@ -1,33 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank K N - Portfolio</title>
+    <style>
+        /* Your general page styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .project {
+            background: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 5px solid #007acc;
+        }
+
+        /* Styles for the 3D animated element (e.g., the card) */
+        .card-container {
+          perspective: 1000px;
+          /* Adjust as needed to position the card within your section */
+          display: flex;
+          justify-content: center; /* Center horizontally */
+          align-items: center; /* Center vertically */
+          height: 400px; /* Example height for the container */
+        }
+
+        .card {
+          width: 200px;
+          height: 300px;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.8s ease-in-out;
+        }
+
+        .card.flipped {
+          transform: rotateY(180deg);
+        }
+
+        .front, .back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+        }
+
+        .back {
+          background-color: #e0e0e0;
+          transform: rotateY(180deg);
+        }
+
+        .photo-container {
+          width: 80%;
+          height: 60%;
+          overflow: hidden;
+          border-radius: 5px;
+          margin-top: 10px; /* Add some space above the photo */
+        }
+
+        .photo-container img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Hello, I'm Shashank</h1>
-    <p>A Full Stack Developer</p>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Brief intro about you.</p>
-  </section>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Shashank K N - Full Stack Developer</p>
+    </header>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">Project 1</div>
-    <div class="project">Project 2</div>
-  </section>
+    <section id="intro">
+        <h2>About Me</h2>
+        <p>A passionate full-stack developer...</p>
+        <div class="card-container">
+            <div class="card" id="infoCard">
+                <div class="front">
+                    <h2>Shashank K N</h2>
+                    <button onclick="document.getElementById('infoCard').classList.toggle('flipped')">Contact Info</button>
+                </div>
+                <div class="back">
+                    <h3>Full Stack Developer</h3>
+                    <p>Contact: 9449117107</p>
+                    <p>Email: shashankkn13@gmail.com</p>
+                    <div class="photo-container">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.-GuFtmbwcGEKF1a3b5dkvgHaEK&pid=Api&P=0&h=220" alt="Shashank K N">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourmail@example.com</p>
-  </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1...</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2...</p>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 Shashank K N</p>
+    </footer>
+
+    <script>
+        // Optional: Add more interactivity or animation with JavaScript
+    </script>
+
 </body>
 </html>
