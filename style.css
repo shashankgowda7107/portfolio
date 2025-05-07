@@ -1,26 +1,155 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #f4f4f4;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 60px 20px;
+  background: linear-gradient(145deg, #1f2f46, #273e5e);
+}
+
+.intro h1 span {
+  color: #00f0ff;
+  font-weight: bold;
+}
+
+.experience-badge {
+  display: inline-block;
+  background: #00f0ff;
+  color: #0f2027;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  animation: fadeInZoom 1s ease both;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  border-radius: 50%;
+  border: 4px solid #00f0ff;
+  animation: bounce 2s infinite;
+}
+
+.skills {
+  margin-top: 30px;
+  perspective: 1000px;
+}
+
+.skills h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #00f0ff;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: linear-gradient(145deg, #243b55, #141e30);
+  padding: 15px 25px;
+  border-radius: 15px;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.skill-card:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 255, 255, 0.4);
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skills li {
+  background: #2c3e50;
+  padding: 8px 15px;
+  border-radius: 12px;
+}
+
+#projects {
+  padding: 40px 20px;
+  background-color: #182b3a;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #1f2f46;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: fadeInZoom 1s ease both;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+#contact {
+  padding: 30px 20px;
+  background-color: #101d2c;
+  font-size: 18px;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+  50% {
+    transform: translateY(-10px);
   }
-  
-  section {
-    padding: 20px;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  
-  .project {
-    background: white;
-    margin: 10px 0;
-    padding: 10px;
-    border-left: 5px solid #007acc;
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
-  
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    font-size: 14px;
+  }
+}

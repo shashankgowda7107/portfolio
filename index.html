@@ -1,139 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shashank K N - Portfolio</title>
-    <style>
-        /* Your general page styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .project {
-            background: white;
-            margin: 10px 0;
-            padding: 10px;
-            border-left: 5px solid #007acc;
-        }
-
-        /* Styles for the 3D animated element (e.g., the card) */
-        .card-container {
-          perspective: 1000px;
-          /* Adjust as needed to position the card within your section */
-          display: flex;
-          justify-content: center; /* Center horizontally */
-          align-items: center; /* Center vertically */
-          height: 400px; /* Example height for the container */
-        }
-
-        .card {
-          width: 200px;
-          height: 300px;
-          position: relative;
-          transform-style: preserve-3d;
-          transition: transform 0.8s ease-in-out;
-        }
-
-        .card.flipped {
-          transform: rotateY(180deg);
-        }
-
-        .front, .back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          backface-visibility: hidden;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: #f0f0f0;
-          border-radius: 10px;
-        }
-
-        .back {
-          background-color: #e0e0e0;
-          transform: rotateY(180deg);
-        }
-
-        .photo-container {
-          width: 80%;
-          height: 60%;
-          overflow: hidden;
-          border-radius: 5px;
-          margin-top: 10px; /* Add some space above the photo */
-        }
-
-        .photo-container img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Shashank K N - Full Stack Developer</p>
+      <div class="intro">
+        <h1 class="animate">I'm <span>Shashank K N</span></h1>
+        <div class="experience-badge">2.4 Years of Experience</div>
+        <p class="animate-delay">Full Stack Developer</p>
+        <img
+          src="shashank.jpg"
+          alt="Shashank"
+          class="profile-pic animate-bounce"
+        />
+
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-card">SQL (MSSQL,MySQL,Oracle)</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">API Integration</div>
+            <div class="skill-card">REST APIs</div>
+            <div class="skill-card">Web API</div>
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React.js</div>
+            <div class="skill-card">Crystal Reports</div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section id="intro">
-        <h2>About Me</h2>
-        <p>A passionate full-stack developer...</p>
-        <div class="card-container">
-            <div class="card" id="infoCard">
-                <div class="front">
-                    <h2>Shashank K N</h2>
-                    <button onclick="document.getElementById('infoCard').classList.toggle('flipped')">Contact Info</button>
-                </div>
-                <div class="back">
-                    <h3>Full Stack Developer</h3>
-                    <p>Contact: 9449117107</p>
-                    <p>Email: shashankkn13@gmail.com</p>
-                    <div class="photo-container">
-                        <img src="https://tse1.mm.bing.net/th?id=OIP.-GuFtmbwcGEKF1a3b5dkvgHaEK&pid=Api&P=0&h=220" alt="Shashank K N">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1...</p>
+      <h2>My Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card fade">
+          <h3>1. Goods Receipt Note Module</h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p>
+            <strong>Tech Stack:</strong> React.js, Material-UI, Node.js, Oracle
+          </p>
+          <p>
+            Developed a GRN module to manage incoming inventory, match purchase
+            orders, auto-calculate pending items, and generate dynamic reports.
+          </p>
+          <p>
+            <strong>Skills:</strong> Form validations, PDF generation, REST
+            APIs, Oracle queries
+          </p>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2...</p>
+
+        <!-- Project 2 -->
+        <div class="project-card fade">
+          <h3>2. Purchase Module</h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p>
+            <strong>Tech Stack:</strong> React.js, Oracle REST Data Services
+          </p>
+          <p>
+            Built a complete purchase management system including supplier quote
+            comparison, approval workflow, and order reports.
+          </p>
+          <p>
+            <strong>Skills:</strong> API integration, UI/UX optimization, data
+            handling
+          </p>
         </div>
+
+        <!-- Project 3 -->
+        <div class="project-card fade">
+          <h3>3. Company Work Bench</h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Tech Stack:</strong> React.js, Oracle</p>
+          <p>
+            Implemented dashboards for employee data, task assignments, leave
+            management, and admin controls with advanced filters.
+          </p>
+          <p>
+            <strong>Skills:</strong> Admin portal design, state management,
+            Oracle joins
+          </p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card fade">
+          <h3>4. Market Module</h3>
+          <p><strong>Role:</strong> Front-End Developer</p>
+          <p><strong>Tech Stack:</strong> React.js</p>
+          <p>
+            Handled logistics workflows including truck-driver assignment,
+            schedule tracking, and delivery status updates.
+          </p>
+          <p>
+            <strong>Skills:</strong> Responsive UI, state handling, real-time
+            updates
+          </p>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card fade">
+          <h3>5. KDCC Recruitment</h3>
+          <p><strong>Role:</strong> Front-End Developer</p>
+          <p><strong>Tech Stack:</strong> React.js</p>
+          <p>
+            Created dynamic forms with validations, cutoff logic, and payment
+            status updates for online recruitment applications.
+          </p>
+          <p>
+            <strong>Skills:</strong> Form validations, conditional rendering,
+            pagination
+          </p>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card fade">
+          <h3>6. TAPCMS Member Registration</h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Tech Stack:</strong> React.js, Node.js, Crystal Reports</p>
+          <p>
+            Automated member registrations with Tata SMS alerts, ID generation,
+            and Crystal Report-based printable ID cards.
+          </p>
+          <p>
+            <strong>Skills:</strong> SMS API, PDF design, backend integration
+          </p>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card fade">
+          <h3>7. SEIREN PayRoll System</h3>
+          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <p><strong>Tech Stack:</strong> React.js, Node.js</p>
+          <p>
+            Built a secure payroll system to manage salaries, promotions, and
+            attendance with role-based access controls.
+          </p>
+          <p><strong>Skills:</strong> Auth system, reporting, data tables</p>
+        </div>
+
+        <!-- Project 8 -->
+        <!-- <div class="project-card fade">
+        <h3>8. Tuition Learning App</h3>
+        <p><strong>Role:</strong> Full-Stack Developer</p>
+        <p><strong>Tech Stack:</strong> React Native, Node.js, DynamoDB, AWS</p>
+        <p>Developed a full app for students with semester-wise videos, topic access control, and paid/free content segregation.</p>
+        <p><strong>Skills:</strong> Mobile app development, AWS, payment gateway</p>
+      </div> -->
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Shashank K N</p>
-    </footer>
-
-    <script>
-        // Optional: Add more interactivity or animation with JavaScript
-    </script>
-
-</body>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>📞 9449117107</p>
+      <p>📧 shashankkn13@gmail.com</p>
+    </section>
+  </body>
 </html>
